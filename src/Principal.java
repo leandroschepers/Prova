@@ -5,15 +5,17 @@ public class Principal extends ManipuladorArquivo {
  
     public static void main(String args[]) throws IOException {
     	
-    	int option = 0;
+    	
+    	
     	
     	Scanner tc = new Scanner(System.in);
     	
     	System.out.println("Digite o local do arquivo :");
     	String path = tc.nextLine();
         ManipuladorArquivo.leitor(path);
-       
- 
+        
+        int arraySize = lista.size();
+        int option = 0;
         
         System.out.println("Digite o método de ordenamento :");
         System.out.println("1 - Insertion Sort");
@@ -23,11 +25,6 @@ public class Principal extends ManipuladorArquivo {
         switch (option) {
         case 1:
         	
-        case 2:
-        	
-        	
-        case 3:
-        	int arraySize = lista.size();
         	long[] valores = new long[arraySize];
         	
         	for (int i = 0; i < lista.size(); i++) {
@@ -36,13 +33,30 @@ public class Principal extends ManipuladorArquivo {
         		
         		valores[i] = number;
         	}
-                BubbleSort.bubbleSort(valores);
-                BubbleSort.printArray(valores, arraySize);
+        	
+        	InsertionSort.insertionSort(valores);
+        	InsertionSort.printArray(valores, arraySize);
+        	break;
+        case 2:
+        	
+        	break;
+        case 3:
+        	long[] valores3 = new long[arraySize];
+        	
+        	for (int i = 0; i < lista.size(); i++) {
+        		
+        		long number2 = Long.parseLong(lista.get(i));
+        		
+        		valores3[i] = number2;
+        	}
+                BubbleSort.bubbleSort(valores3);
+                BubbleSort.printArray(valores3, arraySize);
+                break;
         	
         default:
+        	System.out.println("Escolha inválida!");
         }
         tc.close();
-        
         
     }
  
