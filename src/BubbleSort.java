@@ -1,7 +1,12 @@
-public class BubbleSort extends ManipuladorArquivo {
+public class BubbleSort extends Ordenacao {
 	
+public BubbleSort (long a[]) {
 	
-	 public static void bubbleSort(long[] array){
+	super(a);
+	
+}
+	
+	 public void Ordenar(){
 	        if(array == null){
 	            throw new NullPointerException("O array não existe.");
 	        }
@@ -19,12 +24,6 @@ public class BubbleSort extends ManipuladorArquivo {
 	        }
 	    }
 	 
-	    public static void printArray(long a[], long n){
-	        int i;
-	        for(i = 0; i < n; i++){
-	            System.out.printf("%d, ", a[i]);
-	        }
-	        System.out.printf("\n");
-	    }
+
 
 }

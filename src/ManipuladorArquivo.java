@@ -5,7 +5,8 @@ import java.util.ArrayList;
  
 public class ManipuladorArquivo {
 	
-	static ArrayList<String> lista = new ArrayList<String>();	
+	static ArrayList<String> lista = new ArrayList<String>();
+	
  
     public static void leitor(String path) throws IOException {
         BufferedReader buffRead = new BufferedReader(new FileReader(path));
@@ -16,10 +17,7 @@ public class ManipuladorArquivo {
                 lista.add(linha);     
             } else
                 break;
-        }
-        
+        }       
         buffRead.close();
     }
-    
- 
 }
